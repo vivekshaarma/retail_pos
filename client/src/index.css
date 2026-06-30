@@ -1,0 +1,51 @@
+/* These three @tailwind lines inject all of Tailwind's CSS.
+   Tailwind scans your files and only includes the classes you actually use. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component classes using Tailwind's @apply */
+@layer components {
+  /* Reusable card container */
+  .card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm;
+  }
+
+  /* Primary action button */
+  .btn-primary {
+    @apply bg-brand-600 text-white px-4 py-2 rounded-lg text-sm font-medium
+           hover:bg-brand-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed
+           flex items-center gap-2;
+  }
+
+  /* Secondary / outline button */
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium
+           hover:bg-gray-50 transition-colors flex items-center gap-2;
+  }
+
+  /* Danger button */
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium
+           hover:bg-red-700 transition-colors flex items-center gap-2;
+  }
+
+  /* Form input */
+  .input {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           placeholder-gray-400;
+  }
+
+  /* Form select */
+  .select {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           bg-white;
+  }
+
+  /* Form label */
+  .label {
+    @apply block text-xs font-medium text-gray-600 mb-1;
+  }
+}
