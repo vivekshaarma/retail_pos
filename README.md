@@ -59,6 +59,9 @@ Backend:  http://localhost:5000
 
 ---
 
+### MongoDB
+-MONGO_URI=mongodb+srv://viveksh102:admin7890@cluster0.prnzxim.mongodb.net/?appName=Cluster0
+
 ## Tech Stack
 | Layer | Technology |
 |---|---|
